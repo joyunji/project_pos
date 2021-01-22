@@ -3,6 +3,7 @@ package client;
 public abstract class Pos {
 	private Payment payment;
 	private int price = 1000;
+	private AssetManager am = new AssetManager();
 	
 	public void pay() {
 		if(payment.pay(price)) {
@@ -15,5 +16,9 @@ public abstract class Pos {
 	public void setPaymentMethod(Payment payment) {
 		this.payment = payment;
 	}
+	
+	  public void assetStat() {
+	    	am.stat();
+	    }
 
 }
